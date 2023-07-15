@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 
 .carde {
-    width: var(--card-width);
-    height: var(--card-height);
     position: relative;
     display: flex;
     justify-content: center;
@@ -78,6 +76,7 @@
 }
 
 .carde:hover .title {
+    filter: invert(1);
     transform: translate3d(0%, -50px, 100px);
 }
 
@@ -86,12 +85,17 @@
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
-    z-index: -1;
+    z-index: 5;
 }
 
-.card:hover .character {
+.carde:hover .character {
     opacity: 1;
+    filter: invert(1);
     transform: translate3d(0%, -30%, 100px);
+}
+
+.carde:hover .wrapper {
+    filter: blur(20px);
 }
 
 
@@ -184,7 +188,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 5;
 }
 
 .spinner {
