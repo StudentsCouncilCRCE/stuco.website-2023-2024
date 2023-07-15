@@ -2,6 +2,218 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 
+
+button {
+    position: relative;
+    margin: 0;
+    padding: 17px 35px;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #3d3d3d;
+    border: 1px solid rgba(167, 22, 22, 0.6) !important;
+    border-radius: 10px !important;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button span {
+    color: #164ca7;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+button:hover {
+    animation: rotate624 0.7s ease-in-out both;
+}
+
+button:hover span {
+    animation: storm1261 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm1261 {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+.btn-shine {
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-shine span {
+    z-index: 20;
+}
+
+.btn-shine:after {
+    background: #ef3838;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.4;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+}
+
+.btn-shine:hover:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.form-container {
+    background: linear-gradient(#212121, #212121) padding-box,
+        linear-gradient(135deg, transparent 20%, #FF0000, #FF0000) border-box;
+    border: 2px solid transparent;
+    padding: 96px 64px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+    border-color: #FF0000;
+}
+
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #FF0000;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+
 .carde {
     position: relative;
     display: flex;
@@ -112,6 +324,7 @@
     left: 0;
     z-index: 0;
 }
+
 #anime-demo {
     position: relative;
     width: 100%;
@@ -291,7 +504,7 @@
     display: none;
 }
 
-/* Color Pallette #222831 #393E46 #FF1E56 #FFAC41 */
+/* Color Pallette #222831 #393E46 #ff2b2b #FFAC41 */
 
 .single_advisor_profile {
     position: relative;
@@ -325,7 +538,7 @@
     bottom: -45px;
     left: -25%;
     content: "";
-    background-color: #FF1E56;
+    background-color: #ff2b2b;
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
 }
@@ -348,13 +561,13 @@
 
 .single_advisor_profile .advisor_thumb .social-info a {
     font-size: 22px;
-    color: #FF1E56;
+    color: #ff2b2b;
     padding: 0 5px;
 }
 
 .single_advisor_profile .advisor_thumb .social-info a:hover,
 .single_advisor_profile .advisor_thumb .social-info a:focus {
-    color: #FF1E56;
+    color: #ff2b2b;
 }
 
 .single_advisor_profile .advisor_thumb .social-info a:last-child {
@@ -369,7 +582,7 @@
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     border-radius: 0 0 15px 15px;
-    background-color: #FF1E56;
+    background-color: #ff2b2b;
     color: #ffffff;
 }
 
@@ -380,7 +593,7 @@
     z-index: 1;
     width: 50px;
     height: 3px;
-    background-color: #FF1E56;
+    background-color: #ff2b2b;
     content: "";
     top: 12px;
     right: 30px;
@@ -413,7 +626,7 @@
 
 .single_advisor_profile:hover .advisor_thumb::after,
 .single_advisor_profile:focus .advisor_thumb::after {
-    background-color: #FF1E56;
+    background-color: #ff2b2b;
 }
 
 .single_advisor_profile .advisor_thumb .social-info a,
@@ -430,7 +643,7 @@
 
 .single_advisor_profile:hover .single_advisor_details_info,
 .single_advisor_profile:focus .single_advisor_details_info {
-    background-color: #FF1E56;
+    background-color: #ff2b2b;
 }
 
 .single_advisor_profile:hover .single_advisor_details_info::after,
