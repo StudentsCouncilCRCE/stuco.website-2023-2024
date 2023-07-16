@@ -26,7 +26,6 @@ body {
     color: #c6e2ff;
     animation: neon652.08s ease-in-out infinite alternate;
 }
-
 .stext {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 5.6rem;
@@ -493,8 +492,16 @@ button:hover span {
     position: absolute;
     width: 100%;
     z-index: -1;
+    box-shadow: 0.5rem 0.5rem 0.5rem green;
 }
 
+.line{
+    width: 250px;
+  height: 2px;
+  background: green;
+  margin: 10px auto;
+  border-radius: 5px;
+}
 .carde:hover .wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
@@ -606,7 +613,7 @@ button:hover span {
 }
 
 .about-bg {
-    background-image: url(../img/mesh-757.png);
+    background-image: url(../img/mesh-757\ \(2\).png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -917,4 +924,13 @@ button:hover span {
 .single_advisor_profile:hover .single_advisor_details_info p,
 .single_advisor_profile:focus .single_advisor_details_info p {
     color: #ffffff;
+}
+
+.LST-OP{
+    background-image: url(assets/img/svg.png);
+    text-align: center;
+    background-color: rgba(00, 125, 00, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+ border: #00FF00 solid 2px;
 }
