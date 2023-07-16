@@ -273,7 +273,7 @@ button {
     cursor: pointer;
     text-transform: uppercase;
     background-color: #3d3d3d;
-    border: 1px solid rgba(167, 22, 22, 0.6) !important;
+    border: 1px solid #00FF00 !important;
     border-radius: 10px !important;
     color: #ffffff;
     font-weight: 400;
@@ -344,7 +344,7 @@ button:hover span {
 }
 
 .btn-shine {
-    border: 1px solid;
+    border: 1px solid #00FF00;
     overflow: hidden;
     position: relative;
 }
@@ -354,7 +354,7 @@ button:hover span {
 }
 
 .btn-shine:after {
-    background: #ef3838;
+    background: #00FF00;
     content: "";
     height: 155px;
     left: -75px;
@@ -374,7 +374,7 @@ button:hover span {
 
 .form-container {
     background: linear-gradient(#212121, #212121) padding-box,
-        linear-gradient(135deg, transparent 20%, #FF0000, #FF0000) border-box;
+        linear-gradient(135deg, transparent 20%, #00FF00, #00FF00) border-box;
     border: 2px solid transparent;
     padding: 96px 64px;
     font-size: 14px;
@@ -606,7 +606,7 @@ button:hover span {
 }
 
 .about-bg {
-    background-image: url(../img/bg.png);
+    background-image: url(../img/mesh-757.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
