@@ -1,10 +1,7 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-    html,
-    body {
-        overflow: hidden;
-    }
 
     body {
         margin: 0;
@@ -29,23 +26,27 @@
         position: absolute;
         color: transparent;
         -webkit-background-clip: text;
+        font-size: 3rem;
         -webkit-text-fill-color: transparent;
-        background-image: conic-gradient(#ed0101, blue);
+        font-family: 'Bebas Neue', sans-serif;
+        background-image: conic-gradient(#FFFFFF, #FFFFFF);
         pointer-events: none;
         mix-blend-mode: difference;
         filter: drop-shadow(2px 4px 6px black);
     }
 
     .a-second-title {
-        align-items: center;
+        display: flex;
+        text-align: center;
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 9rem !important;
         position: absolute;
         pointer-events: none;
-        -webkit-text-stroke: 0.1px white;
-        font-size: -webkit-xxx-large;
+        text-shadow:
+            -2px -2px 0 white,
+            2px -2px 0 white,
+            -2px 2px 0 white,
+            2px 2px 0 white;
         font-weight: 900;
-        mix-blend-mode: color-dodge;
     }
 
     canvas {
@@ -55,9 +56,22 @@
 </style>
 <section id='container'>
     <h1 class='a-title'>Move the mouse</h1>
-    <h2 class='a-second-title'>STUDENTS' COUNCIL<br>2023-2024</h2>
+    <h2 class='a-second-title'>STUDENTS' COUNCIL<br>2023 - 2024</h2>
     <canvas></canvas>
 </section>
+<script>
+    function updateFontSize() {
+        const screenWidth = window.innerWidth;
+        const targetFontSize = screenWidth >= 475 ? '9rem' : '5rem';
+
+        const aSecondTitle = document.querySelector('.a-second-title');
+        aSecondTitle.style.fontSize = targetFontSize;
+    }
+
+    updateFontSize();
+
+    window.addEventListener('resize', updateFontSize);
+</script>
 <script>
     'use strict';
 
@@ -67,7 +81,7 @@
 
     let config = {
         TEXTURE_DOWNSAMPLE: 1,
-        DENSITY_DISSIPATION: 0.97,
+        DENSITY_DISSIPATION: 0.99,
         VELOCITY_DISSIPATION: 0.99,
         PRESSURE_DISSIPATION: 0.8,
         PRESSURE_ITERATIONS: 25,
