@@ -229,7 +229,7 @@ body {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .socialbar {
@@ -927,4 +927,8 @@ button:hover span {
 .single_advisor_profile:hover .single_advisor_details_info p,
 .single_advisor_profile:focus .single_advisor_details_info p {
     color: #ffffff;
+}
+#font-arr{
+    font-size: 20px;
+    font-weight: 400;
 }
