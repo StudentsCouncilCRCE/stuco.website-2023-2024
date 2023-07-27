@@ -60,11 +60,16 @@
     <h1 class='a-title'>MOVE THE MOUSE</h1>
     <h2 class='a-second-title'>STUDENTS' COUNCIL<br>2023 - 2024</h2>
     <canvas></canvas>
-</section>  
+</section>
 <script>
     function updateFontSize() {
         const screenWidth = window.innerWidth;
-        const targetFontSize = screenWidth >= 800 ? '9rem' : '5rem';
+        const targetFontSize =
+            screenWidth >= 1200 ? '12rem' :
+                screenWidth >= 1000 ? '10rem' :
+                    screenWidth >= 800 ? '9rem' :
+                        screenWidth >= 600 ? '7rem' :
+                            screenWidth >= 420 ? '5rem' : '3rem';
 
         const aSecondTitle = document.querySelector('.a-second-title');
         aSecondTitle.style.fontSize = targetFontSize;
