@@ -65,12 +65,10 @@
     function updateFontSize() {
         const screenWidth = window.innerWidth;
         const targetFontSize =
-            screenWidth >= 1200 ? '12rem' :
-                screenWidth >= 1000 ? '10rem' :
-                    screenWidth >= 800 ? '9rem' :
-                        screenWidth >= 600 ? '7rem' :
-                            screenWidth >= 450 ? '5rem':
-                                screenWidth >= 300 ? '3rem' : '1rem';
+            screenWidth >= 800 ? '9rem' :
+                screenWidth >= 600 ? '7rem' :
+                    screenWidth >= 450 ? '5rem' :
+                        screenWidth >= 300 ? '3rem' : '1rem';
 
         const aSecondTitle = document.querySelector('.a-second-title');
         aSecondTitle.style.fontSize = targetFontSize;
