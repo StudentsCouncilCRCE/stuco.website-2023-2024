@@ -218,6 +218,17 @@ body {
     border: none;
     margin-top: 20px;
     border-radius: 5em;
+    transition: transform 2s 1s ease-in; 
+}
+.profileimage img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+.wrap{
+}
+.wrap:hover{
+    transform : translateY(-15px);
 }
 
 .pfp {
