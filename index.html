@@ -17,9 +17,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+/>
   </head>
 
-  <body class="no-scroll" style="background-color: black">
+  <body class="no-scroll content" style="background-color: black">
     <div class="spinner-wrapper">
       <div class="spinner">
         <span>S</span>
@@ -1990,6 +1994,11 @@
       src="https://kit.fontawesome.com/4fcf4231e2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script>
+      const content = document.querySelector('.content');
+      new SimpleBar(content);
+  </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       window.addEventListener("load", function () {
@@ -2018,14 +2027,14 @@
     <!-- Setup and start animation! -->
     <script>
       var typed = new Typed("#element", {
-        strings: ["<i>Ingenious</i>", "Hardworking", "diligent"],
+        strings: ["Ingenious", "Hardworking", "Diligent"],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true,
         loopCount: Infinity,
       });
       var typed = new Typed("#element2", {
-        strings: ["<i>Ingenious</i>", "Hardworking", "diligent"],
+        strings: ["Ingenious", "Hardworking", "Diligent"],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true,

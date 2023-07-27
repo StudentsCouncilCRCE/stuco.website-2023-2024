@@ -3,6 +3,7 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
     body {
         margin: 0;
@@ -29,7 +30,7 @@
         -webkit-background-clip: text;
         font-size: 3rem;
         -webkit-text-fill-color: transparent;
-        font-family: 'Bebas Neue', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         background-image: conic-gradient(#FFFFFF, #FFFFFF);
         pointer-events: none;
         mix-blend-mode: difference;
@@ -39,7 +40,7 @@
     .a-second-title {
         display: flex;
         text-align: center;
-        font-family: 'Playfair Display', serif;
+        font-family: 'Montserrat', sans-serif;
         position: absolute;
         pointer-events: none;
         color: white;
@@ -87,12 +88,12 @@
 
     let config = {
         TEXTURE_DOWNSAMPLE: 1,
-        DENSITY_DISSIPATION: 0.98,
+        DENSITY_DISSIPATION: 0.97,
         VELOCITY_DISSIPATION: 0.97,
         PRESSURE_DISSIPATION: 0.1,
         PRESSURE_ITERATIONS: 25,
         CURL: 56,
-        SPLAT_RADIUS: 0.009
+        SPLAT_RADIUS: 0.005
     };
 
 
