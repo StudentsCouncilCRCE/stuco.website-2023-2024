@@ -267,7 +267,7 @@ body {
     color: #00acee;
 }
 
-button {
+.buton {
     position: relative;
     margin: 0;
     padding: 17px 35px;
@@ -279,7 +279,7 @@ button {
     cursor: pointer;
     text-transform: uppercase;
     background-color: #3d3d3d;
-    border: 1px solid #00FF00 !important;
+    border: 1px solid #FFFFFF !important;
     border-radius: 10px !important;
     color: #ffffff;
     font-weight: 400;
@@ -289,18 +289,18 @@ button {
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
-button span {
+.buton span {
     color: #164ca7;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.7px;
 }
 
-button:hover {
+.buton:hover {
     animation: rotate624 0.7s ease-in-out both;
 }
 
-button:hover span {
+.buton:hover span {
     animation: storm1261 0.7s ease-in-out both;
     animation-delay: 0.06s;
 }
@@ -350,7 +350,7 @@ button:hover span {
 }
 
 .btn-shine {
-    border: 1px solid #00FF00;
+    border: 1px solid #FFFFFF;
     overflow: hidden;
     position: relative;
 }
@@ -360,7 +360,7 @@ button:hover span {
 }
 
 .btn-shine:after {
-    background: #00FF00;
+    background: #FFFFFF;
     content: "";
     height: 155px;
     left: -75px;
@@ -380,7 +380,7 @@ button:hover span {
 
 .form-container {
     background: linear-gradient(#212121, #212121) padding-box,
-        linear-gradient(#00FF00, #00FF00) border-box;
+        linear-gradient(#ffffff, #FFFFFF) border-box;
     border: 2px solid transparent;
     padding: 96px 64px;
     font-size: 14px;
