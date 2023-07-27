@@ -2,6 +2,7 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@1,900&display=swap');
 
     body {
         margin: 0;
@@ -38,14 +39,15 @@
     .a-second-title {
         display: flex;
         text-align: center;
-        font-family: 'Bebas Neue', sans-serif;
+        font-family: 'Playfair Display', serif;
         position: absolute;
         pointer-events: none;
+        color: white;
         text-shadow:
-            -2px -2px 0 white,
-            2px -2px 0 white,
-            -2px 2px 0 white,
-            2px 2px 0 white;
+            -2px -2px 0 rgb(0, 0, 0),
+            2px -2px 0 rgb(0, 0, 0),
+            -2px 2px 0 rgb(0, 0, 0),
+            2px 2px 0 rgb(0, 0, 0);
         font-weight: 900;
     }
 
@@ -55,7 +57,7 @@
     }
 </style>
 <section id='container'>
-    <h1 class='a-title'>Move the mouse</h1>
+    <h1 class='a-title'>MOVE THE MOUSE</h1>
     <h2 class='a-second-title'>STUDENTS' COUNCIL<br>2023 - 2024</h2>
     <canvas></canvas>
 </section>  
