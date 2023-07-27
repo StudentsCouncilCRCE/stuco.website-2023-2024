@@ -81,12 +81,12 @@
 
     let config = {
         TEXTURE_DOWNSAMPLE: 1,
-        DENSITY_DISSIPATION: 0.99,
-        VELOCITY_DISSIPATION: 0.99,
-        PRESSURE_DISSIPATION: 0.8,
+        DENSITY_DISSIPATION: 0.98,
+        VELOCITY_DISSIPATION: 0.97,
+        PRESSURE_DISSIPATION: 0.1,
         PRESSURE_ITERATIONS: 25,
-        CURL: 28,
-        SPLAT_RADIUS: 0.004
+        CURL: 56,
+        SPLAT_RADIUS: 0.009
     };
 
 
@@ -747,5 +747,40 @@
             for (let j = 0; j < pointers.length; j++)
                 if (touches[i].identifier == pointers[j].id)
                     pointers[j].down = false;
+    });
+    function updateFluidSimulation(cursorX, cursorY, cursorMoved) {
+        // Calculate the canvas-relative coordinates of the cursor
+        const canvasRect = canvas.getBoundingClientRect();
+        const canvasCursorX = cursorX - canvasRect.left;
+        const canvasCursorY = cursorY - canvasRect.top;
+
+        // Update the pointer position with the cursor coordinates
+        pointers[0].x = canvasCursorX;
+        pointers[0].y = canvasCursorY;
+        pointers[0].moved = cursorMoved;
+    }
+
+    // Add event listeners for cursor movement within the canvas
+    canvas.addEventListener('mousemove', (e) => {
+        updateFluidSimulation(e.offsetX, e.offsetY, true);
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+        updateFluidSimulation(0, 0, false);
+    });
+
+    canvas.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        const touches = e.targetTouches;
+        for (let i = 0; i < touches.length; i++) {
+            updateFluidSimulation(touches[i].pageX, touches[i].pageY, true);
+        }
+    }, false);
+
+    canvas.addEventListener('touchend', (e) => {
+        const touches = e.changedTouches;
+        for (let i = 0; i < touches.length; i++) {
+            updateFluidSimulation(touches[i].pageX, touches[i].pageY, false);
+        }
     });
 </script>
