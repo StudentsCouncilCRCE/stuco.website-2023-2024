@@ -25,17 +25,17 @@ body {
     text-align: center;
     line-height: 1;
     color: #c6e2ff;
-    animation: neon652.08s ease-in-out infinite alternate;
+    animation: neon652 8s ease-in-out infinite alternate;
 }
 
 .stext {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 5.6rem;
+    font-size: 6rem;
     font-weight: 700;
     text-align: center;
     line-height: 1;
-    color: #ffc6c6;
-    animation: sneon652.08s ease-in-out infinite alternate;
+    color: #ffffff;
+    animation: sneon652.8s ease-in-out infinite alternate;
 }
 
 /*-- Animation Keyframes --*/
