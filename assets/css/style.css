@@ -2,10 +2,103 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
 
 body {
     background-image: url(/assets/img/bg.jpeg);
     overflow-x: hidden !important;
+}
+
+.buody {
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 120px);
+    left: calc(50%);
+    color: #FFFFFF;
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+}
+
+.down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 20px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+#container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.a-title {
+    margin-top: 90vh;
+    position: absolute;
+    color: transparent;
+    font-size: 3rem;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    background-image: conic-gradient(#FFFFFF, #FFFFFF);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.a-second-title {
+    display: flex;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    pointer-events: none;
+    color: white;
+    text-shadow:
+        -2px -2px 0 rgb(0, 0, 0),
+        2px -2px 0 rgb(0, 0, 0),
+        -2px 2px 0 rgb(0, 0, 0),
+        2px 2px 0 rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
 }
 
 .sign {
@@ -215,9 +308,10 @@ body {
     border: none;
     margin-top: 20px;
     border-radius: 5em;
-    transition: transform 2s 1s ease-in; 
+    transition: transform 2s 1s ease-in;
 }
-.profileimage img{
+
+.profileimage img {
     height: 200px;
     width: 200px;
     object-fit: cover;
@@ -629,10 +723,10 @@ body {
 }
 
 @media (min-width: 576px) {
-    .glass-morphism-container{
-        
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
+    .glass-morphism-container {
+
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
     }
 }
 
@@ -937,98 +1031,130 @@ body {
 .single_advisor_profile:focus .single_advisor_details_info p {
     color: #ffffff;
 }
-#font-arr{
+
+#font-arr {
     font-size: 20px;
     font-weight: 400;
 }
+
 @import "compass/css3";
- section {
-	 position: absolute;
-	 left: 50%;
-	 top: 50%;
-	 margin: -135px -180px;
-	 width: 360px;
-	 min-height: 270px;
-	 font-size: 35px;
-	 text-align: center;
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -135px -180px;
+    width: 360px;
+    min-height: 270px;
+    font-size: 35px;
+    text-align: center;
 }
+
 .fancy2 {
-	 display: inline-block;
-	 position: relative;
-	 width: 80px;
-	 height: 80px;
-	 margin: 5px;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
 }
- article {
-	 cursor: pointer;
-	 display: block;
-	 position: absolute;
-	 width: 100%;
-	 height: 100%;
-	 background-color: #333;
-	 box-shadow: 0 0 6px -2px #000, 0 0 45px -20px #000;
-	 color: #fff;
-	 line-height: 90px;
-	 transform: perspective(300px) rotateY(0deg);
-	 transition: transform 0.4s linear, background-color 0s linear 0.2s, color 0s linear 0.2s;
+
+article {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    box-shadow: 0 0 6px -2px #000, 0 0 45px -20px #000;
+    color: #fff;
+    line-height: 90px;
+    transform: perspective(300px) rotateY(0deg);
+    transition: transform 0.4s linear, background-color 0s linear 0.2s, color 0s linear 0.2s;
 }
+
 .fancy2:hover article {
-	 transform: perspective(300px) rotateY(180deg);
-	 color: #eee;
-	 transition: transform 0.2s linear, background-color 0s linear 0.1s, color 0s linear 0.1s;
+    transform: perspective(300px) rotateY(180deg);
+    color: #eee;
+    transition: transform 0.2s linear, background-color 0s linear 0.1s, color 0s linear 0.1s;
 }
+
 .fancy2:nth-child(1):hover article {
-	 background-color: #3b5998;
+    background-color: #3b5998;
 }
+
 .fancy2:nth-child(2):hover article {
     background-color: #cb2027;
 }
+
 .fancy2:nth-child(3):hover article {
-	 background-color: #2c4762;
+    background-color: #2c4762;
 }
- .fancy2:nth-child(4):hover article {
+
+.fancy2:nth-child(4):hover article {
     background-color: #3F729B;
 }
-.fancy{
-	 transition: transform 0s linear 0.2s, text-shadow 0s linear 0.2s;
-	 display: block;
-	 -webkit-font-smoothing: subpixel-antialiased;
-	 font-smoothing: antialiased;
+
+.fancy {
+    transition: transform 0s linear 0.2s, text-shadow 0s linear 0.2s;
+    display: block;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: antialiased;
 }
- .fancy2:hover .fancy {
-	 transition: transform 0s linear 0.1s, text-shadow 0s linear 0.1s;
-	 transform: scale(-1, 1);
-	 text-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+
+.fancy2:hover .fancy {
+    transition: transform 0s linear 0.1s, text-shadow 0s linear 0.1s;
+    transform: scale(-1, 1);
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
 }
- @font-face {
-	 font-family: "SSSocial";
-	 src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.eot');
-	 src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.ttf') format('truetype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.svg#SSSocialRegular') format('svg');
-	 font-weight: normal;
-	 font-style: normal;
+
+@font-face {
+    font-family: "SSSocial";
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.ttf') format('truetype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2361/ss-social-regular.svg#SSSocialRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+
 /* This triggers a redraw in IE to Fix IE8's :before content rendering. */
- html:hover [class^="ss-"] {
-	 -ms-zoom: 1;
+html:hover [class^="ss-"] {
+    -ms-zoom: 1;
 }
- .ss-icon, .ss-icon.ss-social, .ss-icon.ss-social-circle, [class^="ss-"]:before, [class*=" ss-"]:before, [class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before, [class^="ss-"].right:after, [class*=" ss-"].right:after, [class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after {
-	 font-family: "SSSocial";
-	 font-style: normal;
-	 font-weight: normal;
-	 text-decoration: none;
-	 text-rendering: optimizeLegibility;
-	 white-space: nowrap;
-	 -moz-font-feature-settings: "liga=1";
-	 -moz-font-feature-settings: "liga";
-	 -ms-font-feature-settings: "liga" 1;
-	 -o-font-feature-settings: "liga";
-	 font-feature-settings: "liga";
-	 -webkit-font-smoothing: antialiased;
+
+.ss-icon,
+.ss-icon.ss-social,
+.ss-icon.ss-social-circle,
+[class^="ss-"]:before,
+[class*=" ss-"]:before,
+[class^="ss-"][class*=" ss-social"]:before,
+[class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-"].right:after,
+[class*=" ss-"].right:after,
+[class^="ss-"][class*=" ss-social"].right:after,
+[class*=" ss-"][class*=" ss-social"].right:after {
+    font-family: "SSSocial";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
 }
- .ss-icon.ss-social-circle, [class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before, [class^="ss-"].ss-social-circle.right:after, [class*=" ss-"].ss-social-circle.right:after {
-	 font-weight: bold;
+
+.ss-icon.ss-social-circle,
+[class^="ss-"].ss-social-circle:before,
+[class*=" ss-"].ss-social-circle:before,
+[class^="ss-"].ss-social-circle.right:after,
+[class*=" ss-"].ss-social-circle.right:after {
+    font-weight: bold;
 }
- [class^="ss-"].right:before, [class*=" ss-"].right:before {
-	 display: none;
-	 content: '';
+
+[class^="ss-"].right:before,
+[class*=" ss-"].right:before {
+    display: none;
+    content: '';
 }
