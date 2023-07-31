@@ -1540,3 +1540,8 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
 
 };
 
+
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  // Rest of the touchmove code
+}, false);
