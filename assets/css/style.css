@@ -764,7 +764,7 @@ canvas {
 }
 
 .no-scroll {
-    overflow: hidden;
+    overflow: scroll;
 }
 
 
