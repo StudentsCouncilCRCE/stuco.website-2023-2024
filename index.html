@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Students' Council 2023-2024</title>
   <meta name="description" content="" />
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/x-icon" href="assets/img/stucologo.png" />
@@ -65,10 +65,11 @@
     </header>
   </div>
 
-  <div style="height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow:scroll;">
+  <div style="height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; ">
     <a href="#about"><div class="down-arrow"></div></a>
     <h2 class='a-second-title'>STUDENTS' COUNCIL<br>2023 - 2024</h2>
-    <canvas style="overflow: scroll;"></canvas>
+    <!-- <canvas style="overflow: scroll;"></canvas> -->
+    <canvas id="myCanvas"></canvas>
 
   </div>
 
@@ -1976,6 +1977,30 @@
         }
     });
 </script>
+
+
+<script>
+  // JavaScript to enable scrolling on the canvas
+  function enableCanvasScroll() {
+    const canvas = document.getElementById('myCanvas');
+
+    // Set the canvas height to the window's inner height
+    canvas.height = window.innerHeight;
+
+    // Function to handle window resize and update canvas height accordingly
+    function resizeCanvas() {
+      canvas.height = window.innerHeight;
+    }
+
+    // Add an event listener for window resize to adjust the canvas height
+    window.addEventListener('resize', resizeCanvas);
+  }
+
+  // Call the function to enable canvas scroll
+  enableCanvasScroll();
+</script>
+
+
 </body>
 
 </html>
