@@ -1903,7 +1903,7 @@
     });
 
     canvas.addEventListener('touchmove', e => {
-        e.preventDefault();
+       
         const touches = e.targetTouches;
         for (let i = 0; i < touches.length; i++) {
             let pointer = pointers[i];
@@ -1921,7 +1921,7 @@
     });
 
     canvas.addEventListener('touchstart', e => {
-        e.preventDefault();
+    
         const touches = e.targetTouches;
         for (let i = 0; i < touches.length; i++) {
             if (i >= pointers.length)
@@ -1968,7 +1968,7 @@
     });
 
     canvas.addEventListener('touchmove', (e) => {
-        e.preventDefault();
+       
         const touches = e.targetTouches;
         for (let i = 0; i < touches.length; i++) {
             updateFluidSimulation(touches[i].pageX, touches[i].pageY, true);
